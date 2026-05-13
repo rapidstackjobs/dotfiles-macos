@@ -1,0 +1,139 @@
+// VS Code Keybindings
+// Place this file at: ~/Library/Application Support/Code/User/keybindings.json
+[
+  // ── Terminal ────────────────────────────────────────────────────────────────
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "workbench.action.terminal.split"
+  },
+
+  // ── Editor ──────────────────────────────────────────────────────────────────
+  {
+    "key": "cmd+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+shift+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+/",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // ── Multi-cursor ────────────────────────────────────────────────────────────
+  {
+    "key": "cmd+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+
+  // ── Navigation ──────────────────────────────────────────────────────────────
+  {
+    "key": "cmd+shift+o",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "cmd+alt+left",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+alt+right",
+    "command": "workbench.action.navigateForward"
+  },
+
+  // ── Sidebar ─────────────────────────────────────────────────────────────────
+  {
+    "key": "cmd+shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "cmd+shift+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "cmd+shift+x",
+    "command": "workbench.view.extensions"
+  },
+
+  // ── Panel / layout ──────────────────────────────────────────────────────────
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+shift+alt+n",
+    "command": "workbench.action.splitEditorRight"
+  },
+
+  // ── Format & Fix ────────────────────────────────────────────────────────────
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+shift+p",
+    "command": "workbench.action.showCommands"
+  },
+
+  // ── Zen mode ────────────────────────────────────────────────────────────────
+  {
+    "key": "cmd+k z",
+    "command": "workbench.action.toggleZenMode"
+  },
+
+  // ── Markdown preview ────────────────────────────────────────────────────────
+  {
+    "key": "cmd+shift+v",
+    "command": "markdown.showPreview",
+    "when": "editorLangId == markdown"
+  },
+  {
+    "key": "cmd+k v",
+    "command": "markdown.showPreviewToSide",
+    "when": "editorLangId == markdown"
+  }
+]
