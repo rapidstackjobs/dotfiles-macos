@@ -168,10 +168,6 @@
   // ── Python ────────────────────────────────────────────────────────────────
   "python.defaultInterpreterPath": "python3",
   "python.terminal.activateEnvironment": true,
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.tabSize": 4
-  },
 
   // ── Copilot ───────────────────────────────────────────────────────────────
   "github.copilot.enable": {

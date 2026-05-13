@@ -75,7 +75,7 @@ cask "1password"              # Password manager
 cask "arc"                    # Browser
 cask "tableplus"              # Database GUI
 cask "insomnia"               # REST/GraphQL client
-cask "fig"                    # Terminal autocomplete (now Amazon Q)
+cask "amazon-q"               # Terminal autocomplete (formerly Fig)
 cask "font-fira-code-nerd-font" # Programming font with icons
 cask "font-jetbrains-mono-nerd-font" # JetBrains Mono with icons
 

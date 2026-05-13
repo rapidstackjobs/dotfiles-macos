@@ -142,7 +142,7 @@ mkcd() { mkdir -p "$1" && cd "$1"; }
 # Find and kill a process by port number
 killport() {
   local port="${1:?Usage: killport <port>}"
-  lsof -ti ":${port}" | xargs -r kill -9
+  lsof -ti ":${port}" | xargs kill -9 || true
   echo "Killed process on port ${port}."
 }
 
