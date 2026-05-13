@@ -1,0 +1,103 @@
+# ~/.aliases
+# Sourced by .zshrc. Keep this file idempotent and side-effect free.
+
+# ── Navigation ────────────────────────────────────────────────────────────────
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+# ── List files ────────────────────────────────────────────────────────────────
+alias ls="ls -G"              # colorise on macOS
+alias ll="ls -lhF"
+alias la="ls -lhAF"
+alias lt="ls -lhtr"           # sort by modification time (oldest first)
+
+# ── Safety nets ───────────────────────────────────────────────────────────────
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
+# ── Networking ────────────────────────────────────────────────────────────────
+alias ip="ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1"
+alias publicip="curl -s https://api.ipify.org && echo"
+alias ping="ping -c 5"
+alias ports="sudo lsof -iTCP -sTCP:LISTEN -n -P"
+
+# ── Homebrew ──────────────────────────────────────────────────────────────────
+alias brewup="brew update && brew upgrade && brew cleanup"
+alias brewdeps="brew leaves | xargs brew deps --installed --for-each | sed 's/^.*:/\x1b[4m&\x1b[24m/'"
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+alias g="git"
+alias gs="git status -sb"
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit -v"
+alias gca="git commit -v --amend"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gl="git log --oneline --graph --decorate --all"
+alias gp="git push"
+alias gpl="git pull --rebase"
+alias gst="git stash"
+alias gstp="git stash pop"
+alias grbi="git rebase -i"
+
+# ── Node / npm ────────────────────────────────────────────────────────────────
+alias ni="npm install"
+alias nid="npm install --save-dev"
+alias nig="npm install -g"
+alias nr="npm run"
+alias nrb="npm run build"
+alias nrt="npm run test"
+alias nrd="npm run dev"
+alias npmls="npm list --depth=0"
+
+# ── Python ────────────────────────────────────────────────────────────────────
+alias py="python3"
+alias pip="pip3"
+alias venv="python3 -m venv .venv && source .venv/bin/activate"
+alias activate="source .venv/bin/activate"
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+alias dk="docker"
+alias dkps="docker ps"
+alias dkpsa="docker ps -a"
+alias dkrm="docker rm"
+alias dkrmi="docker rmi"
+alias dklog="docker logs -f"
+alias dksh="docker exec -it"
+alias dc="docker compose"
+alias dcup="docker compose up -d"
+alias dcdown="docker compose down"
+alias dclogs="docker compose logs -f"
+
+# ── macOS utilities ───────────────────────────────────────────────────────────
+alias showfiles="defaults write com.apple.finder AppleShowAllFiles YES && killall Finder"
+alias hidefiles="defaults write com.apple.finder AppleShowAllFiles NO && killall Finder"
+alias flushdns="sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder && echo 'DNS flushed'"
+alias lockscreen="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias sleepnow="pmset sleepnow"
+alias plist="plutil -convert xml1 -o /dev/stdout"
+
+# ── VS Code ───────────────────────────────────────────────────────────────────
+alias c="code"
+alias co="code ."
+
+# ── Miscellaneous ─────────────────────────────────────────────────────────────
+alias reload="exec zsh -l"
+alias dotfiles="code $HOME/dotfiles"
+alias week="date +%V"
+alias timestamp="date +%Y%m%d_%H%M%S"
+alias path='echo $PATH | tr ":" "\n"'
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias df="df -h"
+alias du="du -sh"
+alias top="top -o cpu"
+alias myip="curl -s ifconfig.me && echo"
+alias weather="curl -s wttr.in/?format=3"
