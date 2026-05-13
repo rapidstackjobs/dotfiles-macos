@@ -1,0 +1,25 @@
+[
+  // ── Navigation ────────────────────────────────────────────────────────────
+  { "key": "cmd+shift+[",   "command": "workbench.action.previousEditor" },
+  { "key": "cmd+shift+]",   "command": "workbench.action.nextEditor" },
+  { "key": "cmd+w",         "command": "workbench.action.closeActiveEditor" },
+  { "key": "ctrl+tab",      "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup" },
+
+  // ── Terminal ──────────────────────────────────────────────────────────────
+  { "key": "ctrl+`",        "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "ctrl+shift+`",  "command": "workbench.action.terminal.new" },
+
+  // ── Explorer ──────────────────────────────────────────────────────────────
+  { "key": "cmd+shift+e",   "command": "workbench.view.explorer" },
+
+  // ── Editor ────────────────────────────────────────────────────────────────
+  { "key": "cmd+d",         "command": "editor.action.addSelectionToNextFindMatch" },
+  { "key": "cmd+shift+d",   "command": "editor.action.duplicateSelection" },
+  { "key": "alt+up",        "command": "editor.action.moveLinesUpAction" },
+  { "key": "alt+down",      "command": "editor.action.moveLinesDownAction" },
+  { "key": "cmd+/",         "command": "editor.action.commentLine" },
+
+  // ── Format ────────────────────────────────────────────────────────────────
+  { "key": "cmd+shift+f",   "command": "editor.action.formatDocument" },
+  { "key": "cmd+k cmd+f",   "command": "editor.action.formatSelection" }
+]
